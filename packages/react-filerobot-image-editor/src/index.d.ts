@@ -216,6 +216,11 @@ type onSaveFunction = (
   imageDesignState: imageDesignState,
 ) => void | Promise;
 
+// type onSaveFunction = (
+//   savedImageData: savedImageData,
+//   imageDesignState: imageDesignState,
+// ) => void | Promise;
+
 export type getCurrentImgDataFunction = (
   imageFileInfo: {
     name?: string;
@@ -295,7 +300,8 @@ export interface FilerobotImageEditorConfig {
   defaultTabId?: availableTabs;
   defaultToolId?: availableTools;
   onBeforeSave?: (savedImageData: savedImageData) => void | boolean;
-  onSave?: onSaveFunction;
+  onSave?: onSaveFunction; 
+  onAutomaticSave?: (currentImageDesignState: imageDesignState) => void;
   onClose?: (closeReason: closingReasons, haveNotSavedChanges: boolean) => void;
   closeAfterSave?: boolean;
   defaultSavedImageName?: string;

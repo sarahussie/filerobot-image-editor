@@ -264,11 +264,11 @@ const SaveButton = () => {
     <>
       <ButtonWithMenu
         className="FIE_topbar-save"
-        color="primary"
+        color="red"
         onClick={triggerSaveHandler}
         menuPosition="bottom"
         menuFromBtn
-        label={menuItems.length > 0 ? t('saveAs') : t('save')}
+        label={menuItems.length > 0 ? t('saveAs save for test ') : t('save for test')}
         menuItems={menuItems}
         menuStyle={saveButtonMenuStyle}
         wrapperStyle={saveButtonWrapperStyle}
